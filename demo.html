@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DD279b2a90afdf0ae7a3796787a0742e"></script>
+</head>
+<body>
+	<div class="map" id="allmap" style="width:800px;height:400px;">
+	</div>
+	<script type="text/javascript">
+	// 百度地图API功能
+		// 百度地图API功能
+	/*var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(121.825757,29.860527), 13);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("宁波");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放*/
+
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(121.615757,29.887527);
+	map.centerAndZoom(point, 12);
+	var marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	</script>
+</body>
+</html>
